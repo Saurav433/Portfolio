@@ -4,18 +4,19 @@ import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
-
 const Footer = () => {
   return (
     <>
+
       <footer className="bg-black text-white py-6 border-t-2 border-slate-900 font-poppins">
         <div className="text-center grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
-          <div className="space-y-4">
-            <p className="text-3xl font-semibold font-Sacramento text-blue-500">Saurav G.C.</p>
-            <p className="max-w-lg mx-auto text-center text-medium">
-              I am a Frontend-focused Web Developer, specializing in building the user-facing components of websites and web applications that contribute to the overall success of the product.
+          <div className="space-y-4 ">
+            <p className=" text-xl">Designed & Developed by <span className="  text-3xl font-semibold font-Sacramento text-blue-500 ">Saurav G.C.</span></p>
+            <p className="max-w-full pl-5  mx-auto text-center text-sm ">
+            
+            This portfolio is more than just a project gallery—it's a live example of my capabilities. Every element has been crafted with precision, focusing on detail, performance, and creativity, just like the solutions I can create for you.
             </p>
-            <p> <span className="text-yellow-300">click</span> on the home page grid  for<span className="text-blue-500"> background ripple effect </span></p>
+            <p>click on the home page grid  for<span className="text-blue-500"> background ripple effect </span></p>
           </div>
           
           <div className="flex flex-col items-center justify-center">
@@ -38,7 +39,7 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-md text-white mt-5">
-              &copy; {new Date().getFullYear()} <span className="text-indigo-600">Saurav G.C.</span> All Rights Reserved.
+              &copy; {new Date().getFullYear()} Saurav G.C. All Rights Reserved.
             </p>
           </div>
         </div>

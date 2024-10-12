@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion,useScroll, useSpring } from "framer-motion";
 
 const Nav = () => {
   const navitems = [
@@ -17,12 +17,19 @@ const Nav = () => {
   const gotohome = () => {
     navigate("/");
   };
+
+  const {scrollYProgress}=useScroll();
+  const scaleX= useSpring(scrollYProgress);
   return (
     <>
-      <div className="fixed flex w-full justify-between text-white h-[3.9rem]  items-center bg-[#000000]   p-3 z-50 shadow-lg">
+    <div className="fixed flex w-full z-50 ">
+
+      <div className="fixed flex w-full justify-between text-white h-[3.9rem]  items-center bg-[#000000] shadow-black  p-3 z-50 shadow-lg  ">
+        
        
         {/* logo */}
         <div className="mx-4 md:mx-20 flex gap-4 items-center">
+          
           <img onClick={gotohome} src="Sgc.jpg" alt="" className="h-[3.9rem] w-28 cursor-pointer" />
         </div>
 
@@ -85,7 +92,24 @@ const Nav = () => {
             })}
           </div>
         </div>
+       
       </div>
+
+      <motion.div
+      className="z-50 rounded-r-3xl bg-gradient-to-r from-purple-500 to-pink-500 lg:h-[1.5px] h-[1px]"
+        style={{
+          scaleX,
+          transformOrigin:'left',
+          width:'100%',
+          transition:{
+            duration:1,
+            delay:0.5,
+
+          } 
+        }}
+        >
+        </motion.div>
+        </div>
     </>
   );
 };
