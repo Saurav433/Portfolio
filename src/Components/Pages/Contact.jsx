@@ -22,6 +22,7 @@ const Contact = () => {
     if (!formData.message.trim()) {
       errorData.message = "Message is required.";
     }
+    seterrorData(errorData);
     return errorData;
   };
 
