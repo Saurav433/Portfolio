@@ -46,7 +46,7 @@ const About = () => {
         <p className="text-4xl font-semibold max-w-full text-center text-blue-600">
           ABOUT ME <span className='text-red-500 text-4xl font-Londrina'>.</span> <span className='text-yellow-500 text-4xl font-Londrina'>.</span>  <span className='text-green-700 text-4xl font-Londrina'>.</span>
         </p>
-        <p className="max-w-2xl text-md lg:text-xl font-light">
+        <p className="max-w-2xl text-md lg:text-xl font-light font-sans opacity-80">
           Here you will find more information about me, what I do, and my
           current skills mostly in terms of programming and technology.
         </p>
@@ -56,7 +56,7 @@ const About = () => {
           <h1 className="text-2xl font-semibold whitespace-nowrap text-yellow-400">
             GET TO ME!
           </h1>
-          <p className="max-w-full  text-xs  text-start lg:pl-0 pl-5 lg:text-lg">
+          <p className="max-w-full  text-xs  text-start lg:pl-0 pl-5 lg:text-lg font-light opacity-90">
             I'm <span className="border-b border-cyan-500">Saurav</span>, a
             passionate{" "}
             <span className="border-b border-green-200">web developer</span>{" "}
@@ -65,13 +65,13 @@ const About = () => {
             practices, I craft digital experiences that truly resonate with
             users. Let's collaborate to bring your vision to life!
           </p>
-          <p className="max-w-full  text-xs text-start pl-5 lg:pl-0 lg:text-lg">
+          <p className="max-w-full  text-xs text-start pl-5 lg:pl-0 lg:text-lg font-light opacity-90">
             I’m actively seeking job opportunities where I can contribute,
             learn, and grow. If you have an exciting opportunity that aligns
             with my skills and experience, feel free to reach out!
           </p>
           <div className="flex justify-center pl-5 lg:pl-0">
-            <button onClick={gotocontact} className="px-8 py-2 md:px-20 md:py-3 transition-transform hover:scale-105 delay-105 bg-gradient-to-l from-blue-500 to-cyan-500 hover:bg-gradient-to-r from-blue-600 to-cyan-500 duration-75 text-center rounded-lg text-xl font-semibold">
+            <button onClick={gotocontact} className="px-8 py-2 md:px-20 md:py-3 opacity-75 hover:opacity-100 transition-transform hover:scale-105 delay-105 bg-gradient-to-l from-blue-500 to-cyan-500 hover:bg-gradient-to-r from-blue-600 to-cyan-500 duration-75 text-center rounded-lg text-xl font-semibold">
               CONTACT
             </button>
           </div>

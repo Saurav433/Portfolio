@@ -59,11 +59,11 @@ const Home = () => {
       <div className="font-poppins  text-white ">
         <BackgroundCellAnimation />
 
-        <div className="absolute top-1/2 lg:translate-x-1/2   -translate-y-1/3 grid gap-10 z-40">
+        <div className="absolute top-1/2 lg:translate-x-1/2   -translate-y-1/3 grid gap-10 z-40 opacity-95">
           <p className="text-center font-bold text-7xl font-Oswald p-1 opacity-85">
             Hey, I'm <span className=" font-Oswald">Saurav G.C.</span>
           </p>
-          <h1 className="max-w-3xl font-base text-xl font-poppins text-center p-1">
+          <h1 className="max-w-3xl font-base text-xl font-poppins text-center p-1 opacity-70">
             I'm a dynamic{" "}
             <span className="border-b border-purple-500 border-opacity-70">
               Web Developer
@@ -74,7 +74,7 @@ const Home = () => {
           <div className="max-h-max  p-3  text-center">
             <button
               onClick={gotoproject}
-              className=" max-h-md max-w-md px-20 py-3 shadow-lg shadow-slate-900 hover:shadow-slate-700  transition-transform hover:scale-105 delay-105 bg-gradient-to-l from-blue-600 to-cyan-500 hover:bg-gradient-to-r from-blue-600 to-cyan-500 duration-75 text-center rounded-lg text-xl font-semibold "
+              className=" max-h-md max-w-md px-20 py-3 shadow-md opacity-85 hover:opacity-100 shadow-slate-900 hover:shadow-slate-700  transition-transform hover:scale-105 delay-105 bg-gradient-to-l from-blue-600 to-cyan-500 hover:bg-gradient-to-r from-blue-600 to-cyan-500 duration-75 text-center rounded-lg text-xl font-medium "
             >
               Projects
             </button>
@@ -90,7 +90,7 @@ const Home = () => {
                 className={`flex flex-cols-2 p-2 gap-6 -translate-x-28  hover:translate-x-[0.1px] hover:rounded-r-lg duration-700 delay-0  text-center items-center justify-end   bg-gradient-to-l from-slate-800 to-blue-300 opacity-90 cursor-pointer 
                  ${
                    item.name === "Email"
-                     ? `border-b  rounded-br-lg shadow `
+                     ? `border-b  rounded-br-lg shadow border-[#EB493B]`
                      : `shadow-none`
                  }
                  ${
