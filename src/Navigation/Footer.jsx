@@ -12,10 +12,7 @@ const Footer = () => {
         <div className="text-center grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
           <div className="space-y-4 ">
             <p className=" text-xl">Designed & Developed by <span className="  text-3xl font-semibold font-Sacramento text-blue-500 ">Saurav G.C.</span></p>
-            <p className="max-w-full pl-5  mx-auto text-center text-sm ">
             
-            This portfolio is more than just a project gallery—it's a live example of my capabilities. Every element has been crafted with precision, focusing on detail, performance, and creativity, just like the solutions I can create for you.
-            </p>
             <p>click on the home page grid  for<span className="text-blue-500"> background ripple effect </span></p>
           </div>
           

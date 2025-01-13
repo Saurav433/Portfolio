@@ -42,7 +42,7 @@ const About = () => {
   };
   return (
     <div className="font-poppins  lg:space-y-16 space-y-5 h-screen text-white bg-[#020617]  ">
-      <div className="grid items-center text-center justify-center lg:space-y-8 pt-5">
+      <div className="grid items-center text-center justify-center space-y-10 lg:space-y-8 pt-5">
         <p className="text-4xl font-semibold max-w-full text-center text-blue-600">
           ABOUT ME <span className='text-red-500 text-4xl font-Londrina'>.</span> <span className='text-yellow-500 text-4xl font-Londrina'>.</span>  <span className='text-green-700 text-4xl font-Londrina'>.</span>
         </p>
