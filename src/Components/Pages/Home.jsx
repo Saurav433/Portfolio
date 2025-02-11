@@ -5,6 +5,7 @@ import {
   FaInstagram,
   FaRegEnvelope,
 } from "react-icons/fa";
+import { RiArrowRightSLine } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import BackgroundCellAnimation from "../AnimationPages/BackgroundCellAnimation";
 import About from "./About";
@@ -12,6 +13,7 @@ import Project from "./Project";
 import Contact from "./Contact";
 import Footer from "../../Navigation/Footer";
 import { useNavigate } from "react-router-dom";
+import TypingEffect from "react-typing-effect";
 const Home = () => {
   const logo = [
     {
@@ -51,8 +53,8 @@ const Home = () => {
     },
   ];
   const navigate = useNavigate();
-  const gotoproject = () => {
-    navigate("/project");
+  const gotocontact = () => {
+    navigate("/contact");
   };
   return (
     <>
@@ -60,26 +62,37 @@ const Home = () => {
         <BackgroundCellAnimation />
 
         <div className="absolute top-1/2 lg:translate-x-1/2   -translate-y-1/3 grid gap-10 z-40 opacity-95">
-          <p className="text-center font-bold text-7xl font-Oswald p-1 opacity-85">
-            Hey, I'm <span className=" font-Oswald">Saurav G.C.</span>
+          <p className="text-center font-bold text-7xl font-Oswald p-1 opacity-85 text-slate-100">
+            Hey, I'm <span className=" font-Oswald text-white">Saurav G.C.</span>
           </p>
           <h1 className="max-w-3xl font-base text-xl font-poppins text-center p-1 opacity-70">
-            I'm a dynamic{" "}
-            <span className="border-b border-purple-500 border-opacity-70">
-              Web Developer
-            </span>{" "}
+            I'm a dynamic{" "} 
+            <span className="border-b border-purple-500 max-w-fit border-opacity-70">
+            Web Developer
+        {/* <TypingEffect
+          text={["Web Developer", "Frontend Developer", "React Developer"]}
+          speed={100}
+          eraseSpeed={50}
+          eraseDelay={1500}
+          typingDelay={500}
+        /> */}
+            </span>
+            <span>{" "}
             building and managing Websites and Web Applications that leads to
             impactful designs that enhance user engagement.
+            </span>
           </h1>
-          <div className="max-h-max  p-3  text-center">
+          <div className=" flex text-lg ml-3 justify-center text-blue-400 hover:text-xl delay-100 duration-200">
             <button
-              onClick={gotoproject}
-              className=" max-h-md max-w-md px-20 py-3 shadow-md opacity-85 hover:opacity-100 shadow-slate-900 hover:shadow-slate-700  transition-transform hover:scale-105 delay-105 bg-gradient-to-l from-blue-600 to-cyan-500 hover:bg-gradient-to-r from-blue-600 to-cyan-500 duration-75 text-center rounded-lg text-xl font-medium "
+              onClick={gotocontact}
+
+              className=" flex items-center justify-center gap-2"
             >
-              Projects
+              Connect with me<RiArrowRightSLine className="-ml-2 text-center text-xl"/>
             </button>
+      
           </div>
-        </div>
+        </div> 
 
         <div className="absolute hidden lg:grid top-1/3 left-0 z-40">
           {logo.map((item, index) => {

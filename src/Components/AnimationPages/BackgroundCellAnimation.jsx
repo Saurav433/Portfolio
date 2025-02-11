@@ -47,9 +47,9 @@ const BackgroundCellCore = () => {
             WebkitMaskRepeat: "no-repeat",
           }}
         >
-          <Pattern cellClassName="border-purple-600 relative z-[100]" />
+          <Pattern cellClassName="border-slate-900 relative z-[100]" />
         </div>
-        <Pattern className="opacity-[0.5]" cellClassName="border-neutral-700" />
+        <Pattern className="opacity-[0.2]" cellClassName="border-slate-700" />
       </div>
     </div>
   );
@@ -75,7 +75,7 @@ const Pattern = ({ className, cellClassName }) => {
                   Math.pow(clickedCell[0] - rowIdx, 2) + Math.pow(clickedCell[1] - colIdx, 2)
                 );
                 controls.start({
-                  opacity: [0, 1 - distance * 0.02, 0],
+                  opacity: [0, 0.5 - distance * 0.02, 0],
                   transition: { duration: distance * 0.2 },
                 });
               }
@@ -91,7 +91,7 @@ const Pattern = ({ className, cellClassName }) => {
               >
                 <motion.div
                   initial={{ opacity: 0 }}
-                  whileHover={{ opacity: [0, 1, 0.5] }}
+                  whileHover={{ opacity: [0, 0.2, 0.2] }}
                   transition={{ duration: 0.5, ease: "backOut" }}
                   animate={controls}
                   className="bg-blue-600 h-12 w-12"
