@@ -9,7 +9,7 @@ import Contact from './Components/Pages/Contact'
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter >
       <Nav/>
       <div style={{ paddingTop: '60px' }}>
       <Routes>
@@ -27,5 +27,4 @@ const App = () => {
 }
 
 export default App
-
 

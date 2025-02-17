@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#020617] h-screen p-5">
+    <div className="bg-[#020617] h-screen p-5 -mt-16" id="contact">
       <div className="grid items-center text-center justify-center space-y-8 pt-2">
         <div>
         <p className="text-4xl font-bold max-w-full text-center text-blue-600">
@@ -103,3 +103,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

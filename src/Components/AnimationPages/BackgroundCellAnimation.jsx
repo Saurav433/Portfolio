@@ -31,7 +31,7 @@ const BackgroundCellCore = () => {
   };
 
   return (
-    <div ref={ref} onMouseMove={handleMouseMove} className="h-full absolute -inset-[55px]">
+    <div ref={ref} onMouseMove={handleMouseMove} className=" absolute -inset-[55px]">
       <div className="absolute h-[20rem] inset-y-16 overflow-hidden">
         <div className="absolute h-full w-full pointer-events-none -bottom-2 z-40 bg-slate-950 [mask-image:linear-gradient(to_bottom,transparent,black)]"></div>
         <div
@@ -49,7 +49,7 @@ const BackgroundCellCore = () => {
         >
           <Pattern cellClassName="border-slate-900 relative z-[100]" />
         </div>
-        <Pattern className="opacity-[0.2]" cellClassName="border-slate-700" />
+        <Pattern className="opacity-[0.4]" cellClassName="border-gray-500" />
       </div>
     </div>
   );

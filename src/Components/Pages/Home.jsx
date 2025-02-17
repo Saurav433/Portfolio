@@ -12,8 +12,7 @@ import About from "./About";
 import Project from "./Project";
 import Contact from "./Contact";
 import Footer from "../../Navigation/Footer";
-import { useNavigate } from "react-router-dom";
-import TypingEffect from "react-typing-effect";
+import { Link } from "react-scroll";
 const Home = () => {
   const logo = [
     {
@@ -52,13 +51,10 @@ const Home = () => {
       to: "mailto:Sauravgc2060@gmail.com",
     },
   ];
-  const navigate = useNavigate();
-  const gotocontact = () => {
-    navigate("/contact");
-  };
+
   return (
     <>
-      <div className="font-poppins  text-white ">
+      <div className="font-poppins  text-white -mt-16" id="home">
         <BackgroundCellAnimation />
 
         <div className="absolute top-1/2 lg:translate-x-1/2   -translate-y-1/3 grid gap-10 z-40 opacity-95">
@@ -66,33 +62,29 @@ const Home = () => {
             Hey, I'm <span className=" font-Oswald text-white">Saurav G.C.</span>
           </p>
           <h1 className="max-w-3xl font-base text-xl font-poppins text-center p-1 opacity-70">
-            I'm a dynamic{" "} 
-            <span className="border-b border-purple-500 max-w-fit border-opacity-70">
-            Web Developer
-        {/* <TypingEffect
-          text={["Web Developer", "Frontend Developer", "React Developer"]}
-          speed={100}
-          eraseSpeed={50}
-          eraseDelay={1500}
-          typingDelay={500}
-        /> */}
+            I'm a{" "}
+            <span className="border-b border-purple-500 max-w-fit ">
+              Web Developer
+
             </span>
             <span>{" "}
-            building and managing Websites and Web Applications that leads to
-            impactful designs that enhance user engagement.
+              building and managing Websites and Web Applications that leads to
+              impactful designs that enhance user engagement.
             </span>
           </h1>
-          <div className=" flex text-lg ml-3 justify-center text-blue-400 hover:text-xl delay-100 duration-200">
-            <button
-              onClick={gotocontact}
-
-              className=" flex items-center justify-center gap-2"
+          <div className="flex text-lg ml-3 justify-center text-blue-400 transition-all duration-300 ease-in-out">
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="flex items-center justify-center gap-2 text-lg text-blue-400 transition-all duration-300 ease-in-out hover:scale-105 hover:text-blue-500 cursor-pointer"
             >
-              Connect with me<RiArrowRightSLine className="-ml-2 text-center text-xl"/>
-            </button>
-      
+              Connect with me
+              <RiArrowRightSLine className="-ml-2 text-center text-xl transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
+            </Link>
           </div>
-        </div> 
+
+        </div>
 
         <div className="absolute hidden lg:grid top-1/3 left-0 z-40">
           {logo.map((item, index) => {
@@ -101,22 +93,20 @@ const Home = () => {
                 href={`${item.to}`}
                 key={index}
                 className={`flex flex-cols-2 p-2 gap-6 -translate-x-28  hover:translate-x-[0.1px] hover:rounded-r-lg duration-700 delay-0  text-center items-center justify-end   bg-gradient-to-l from-slate-800 to-blue-300 opacity-90 cursor-pointer 
-                 ${
-                   item.name === "Email"
-                     ? `border-b  rounded-br-lg shadow border-[#EB493B]`
-                     : `shadow-none`
-                 }
-                 ${
-                   item.name === "Github"
-                     ? ` border-t rounded-tr-lg shadow-t-md `
-                     : `shadow-none`
-                 }
+                 ${item.name === "Email"
+                    ? `border-b  rounded-br-lg shadow border-[#EB493B]`
+                    : `shadow-none`
+                  }
+                 ${item.name === "Github"
+                    ? ` border-t rounded-tr-lg shadow-t-md `
+                    : `shadow-none`
+                  }
                   `}
               >
                 <h1 className="text-lg font-poppins text-black font-medium ">
                   {item.name}
                 </h1>
-                <p className={`text-${item.color} text-3xl text-center`}>
+                <p className={`text-${item.color} text-2xl text-center`}>
                   {item.icon}
                 </p>
               </a>

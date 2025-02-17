@@ -8,7 +8,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import { SiAdobephotoshop, SiTailwindcss } from "react-icons/si";
-import { useNavigate } from "react-router-dom";
+
 
 const About = () => {
   const skill = [
@@ -36,12 +36,9 @@ const About = () => {
     { id: 7, name: "Figma", icon: <FaFigma />, color: "text-[#F24E1E]" },
     { id: 8, name: "GitHub", icon: <FaGithub />, color: "text-white" },
   ];
-  const navigate = useNavigate();
-  const gotocontact = () => {
-    navigate("/contact");
-  };
+  
   return (
-    <div className="font-poppins  lg:space-y-16 space-y-5 h-screen text-white bg-[#020617]  ">
+    <div className="font-poppins  lg:space-y-16 space-y-5 h-screen text-white bg-[#020617] " id="about">
       <div className="grid items-center text-center justify-center space-y-10 lg:space-y-8 pt-5">
         <p className="text-4xl font-semibold max-w-full text-center text-blue-600">
           ABOUT ME <span className='text-red-500 text-4xl font-Londrina'>.</span> <span className='text-yellow-500 text-4xl font-Londrina'>.</span>  <span className='text-green-700 text-4xl font-Londrina'>.</span>
@@ -70,11 +67,7 @@ const About = () => {
             learn, and grow. If you have an exciting opportunity that aligns
             with my skills and experience, feel free to reach out!
           </p>
-          <div className="flex justify-center pl-5 lg:pl-0">
-            <button onClick={gotocontact} className="px-8 py-2 md:px-20 md:py-3 opacity-75 hover:opacity-100 transition-transform hover:scale-105 delay-105 bg-gradient-to-l from-blue-500 to-cyan-500 hover:bg-gradient-to-r from-blue-600 to-cyan-500 duration-75 text-center rounded-lg text-xl font-semibold">
-              CONTACT
-            </button>
-          </div>
+          {/*  */}
         </div>
 
         <div className="space-y-10">
@@ -102,4 +95,3 @@ const About = () => {
 };
 
 export default About;
-
