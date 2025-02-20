@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   FaHtml5,
@@ -8,7 +9,6 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import { SiAdobephotoshop, SiTailwindcss } from "react-icons/si";
-
 
 const About = () => {
   const skill = [
@@ -36,57 +36,69 @@ const About = () => {
     { id: 7, name: "Figma", icon: <FaFigma />, color: "text-[#F24E1E]" },
     { id: 8, name: "GitHub", icon: <FaGithub />, color: "text-white" },
   ];
-  
+
   return (
-    <div className="font-poppins  lg:space-y-16 space-y-5 h-screen text-white bg-[#020617] " id="about">
-      <div className="grid items-center text-center justify-center space-y-10 lg:space-y-8 pt-5">
+    <div
+      className="font-poppins text-white bg-[#020617] min-h-screen py-6  px-5 lg:px-20"
+      id="about"
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center space-y-5">
         <p className="text-4xl font-semibold max-w-full text-center text-blue-600">
-          ABOUT ME <span className='text-red-500 text-4xl font-Londrina'>.</span> <span className='text-yellow-500 text-4xl font-Londrina'>.</span>  <span className='text-green-700 text-4xl font-Londrina'>.</span>
+         ABOUT ME <span className='text-red-500 text-4xl font-Londrina'>.</span> <span className='text-yellow-500 text-4xl font-Londrina'>.</span>  <span className='text-green-700 text-4xl font-Londrina'>.</span>
         </p>
-        <p className="max-w-2xl text-md lg:text-xl font-light font-sans opacity-80">
-          Here you will find more information about me, what I do, and my
-          current skills mostly in terms of programming and technology.
-        </p>
-      </div>
-      <div className="text-center grid gap-5 lg:gap-10 grid-cols-2">
-        <div className="text-center space-y-10 lg:space-x-24">
-          <h1 className="text-2xl font-semibold whitespace-nowrap text-yellow-400">
-            GET TO ME!
-          </h1>
-          <p className="max-w-full  text-xs  text-start lg:pl-0 pl-5 lg:text-lg font-light opacity-90">
-            I'm <span className="border-b border-cyan-500">Saurav</span>, a
-            passionate{" "}
-            <span className="border-b border-green-200">web developer</span>{" "}
-            dedicated to transforming ideas into interactive and responsive
-            websites. With a strong focus on clean design and efficient coding
-            practices, I craft digital experiences that truly resonate with
-            users. Let's collaborate to bring your vision to life!
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            Here you will find more information about me, what I do, and my
+            current skills mostly in terms of programming and technology.
           </p>
-          <p className="max-w-full  text-xs text-start pl-5 lg:pl-0 lg:text-lg font-light opacity-90">
-            I’m actively seeking job opportunities where I can contribute,
-            learn, and grow. If you have an exciting opportunity that aligns
-            with my skills and experience, feel free to reach out!
-          </p>
-          {/*  */}
         </div>
 
-        <div className="space-y-10">
-          <h1 className="text-2xl font-semibold text-yellow-400">My Skills</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-5 gap-2">
-            {skill.map((items) => (
-              <div key={items.id} className="grid items-center justify-center">
-                <div className="bg-[#111827] flex items-center justify-center lg:w-40 lg:h-24 w-28 h-12 rounded-lg hover:scale-105 transition-transform duration-300">
-                  <div className="text-center">
-                    <p className={`${items.color} text-xl lg:text-4xl`}>
-                      {items.icon}
-                    </p>
-                    <h2 className="lg:text-lg text-sm font-lg text-[#006d77] text-center">
-                      {items.name}
-                    </h2>
-                  </div>
-                </div>
+        <div className="mt-16 grid lg:grid-cols-2 gap-10 ">
+          {/* About Me Section */}
+          <div className="space-y-8">
+            <h2 className="text-2xl font-bold text-yellow-400 text-center">
+              GET TO KNOW ME!
+            </h2>
+            <div className="flex justify-center">
+              {/* Creative Photo Design */}
+              <div className="relative w-56 h-56">
+                <div className="absolute inset-0 bg-[#1E293B] rounded-lg transform rotate-6"></div>
+                <img
+                  src="saurav2.jpg"
+                  alt="Saurav"
+                  className="absolute inset-0 w-full h-full object-cover rounded-lg transform -rotate-6 transition-transform duration-300 hover:rotate-0"
+                />
               </div>
-            ))}
+            </div>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              I'm <span className="text-cyan-500 font-semibold">Saurav</span>, a
+              passionate{" "}
+              <span className="text-green-300 font-semibold">web developer</span>{" "}
+              dedicated to transforming ideas into interactive and responsive
+              websites. With a strong focus on clean design and efficient coding
+              practices, I craft digital experiences that truly resonate with
+              users. Let's collaborate to bring your vision to life!
+            </p>
+          </div>
+
+          {/* Skills Section */}
+          <div className="space-y-8">
+            <h2 className="text-2xl font-bold text-yellow-400 text-center">
+              My Skills
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {skill.map((item) => (
+                <div
+                  key={item.id}
+                  className="bg-[#111827] rounded-lg p-4 flex flex-col items-center justify-center space-y-2 transform transition-transform duration-300 hover:scale-105 hover:shadow-md hover:shadow-cyan-500/20"
+                >
+                  <div className={`${item.color} text-3xl`}>{item.icon}</div>
+                  <h3 className="text-gray-300 text-sm font-semibold">
+                    {item.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -95,3 +107,4 @@ const About = () => {
 };
 
 export default About;
+

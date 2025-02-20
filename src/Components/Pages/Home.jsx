@@ -92,7 +92,7 @@ const Home = () => {
               <a
                 href={`${item.to}`}
                 key={index}
-                className={`flex flex-cols-2 p-2 gap-6 -translate-x-28  hover:translate-x-[0.1px] hover:rounded-r-lg duration-700 delay-0  text-center items-center justify-end   bg-gradient-to-l from-slate-800 to-blue-300 opacity-90 cursor-pointer 
+                className={`flex flex-cols-2 p-2 gap-7 -translate-x-28  hover:translate-x-[0.1px] hover:rounded-r-lg duration-700 delay-0  text-center items-center justify-end   bg-gradient-to-l from-slate-800 to-blue-300 opacity-90 cursor-pointer 
                  ${item.name === "Email"
                     ? `border-b  rounded-br-lg shadow border-[#EB493B]`
                     : `shadow-none`

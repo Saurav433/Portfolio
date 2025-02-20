@@ -63,16 +63,16 @@ const Nav = () => {
         isVisible ? "translate-y-0" : "-translate-y-16"
       }`}
     >
-      <div className="relative flex items-center shadow-lg px-4 py-2 rounded-full bg-gray-900 bg-opacity-90 backdrop-blur-3xl shadow-black lg:px-6">
+      <div className="relative flex items-center shadow-lg px-4  rounded-full bg-gray-900 bg-opacity-90 backdrop-blur-3xl shadow-black  p-1 lg:px-6">
         {/* Logo */}
-        <div className="relative flex items-center gap-2 cursor-pointer border-[0.1px] border-purple-300 rounded-full">
+        <div className="relative flex items-center gap-2 cursor-pointer border-[0.1px] border-purple-300 rounded-full ">
           <Link
             to="home"
             smooth={true}
             duration={500}
             onClick={() => setSelectedLink("Home")}
           >
-            <img src="saurav1.jpg" alt="Logo" className="w-6 h-6 rounded-full" />
+            <img src="saurav1.jpg" alt="Logo" className="w-10 h-10 rounded-full object-cover " />
           </Link>
         </div>
 
