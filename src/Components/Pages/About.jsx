@@ -56,13 +56,13 @@ const About = () => {
         <div className="mt-16 grid lg:grid-cols-2 gap-10 ">
           {/* About Me Section */}
           <div className="space-y-8">
-            <h2 className="text-2xl font-bold text-yellow-400 text-center">
+            <h2 className="text-2xl font-bold text-blue-400 text-center">
               GET TO KNOW ME!
             </h2>
             <div className="flex justify-center">
               {/* Creative Photo Design */}
               <div className="relative w-56 h-56">
-                <div className="absolute inset-0 bg-[#1E293B] rounded-lg transform rotate-6"></div>
+                <div className="absolute inset-0 bg-slate-800 rounded-lg transform rotate-6"></div>
                 <img
                   src="saurav2.jpg"
                   alt="Saurav"
@@ -73,7 +73,7 @@ const About = () => {
             <p className="text-gray-300 text-lg leading-relaxed">
               I'm <span className="text-cyan-500 font-semibold">Saurav</span>, a
               passionate{" "}
-              <span className="text-green-300 font-semibold">web developer</span>{" "}
+              <span className="font-semibold">web developer</span>{" "}
               dedicated to transforming ideas into interactive and responsive
               websites. With a strong focus on clean design and efficient coding
               practices, I craft digital experiences that truly resonate with
@@ -83,7 +83,7 @@ const About = () => {
 
           {/* Skills Section */}
           <div className="space-y-8">
-            <h2 className="text-2xl font-bold text-yellow-400 text-center">
+            <h2 className="text-2xl font-bold text-blue-400 text-center">
               My Skills
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

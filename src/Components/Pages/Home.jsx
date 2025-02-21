@@ -6,6 +6,7 @@ import {
   FaRegEnvelope,
 } from "react-icons/fa";
 import { RiArrowRightSLine } from "react-icons/ri";
+import { motion } from "framer-motion";
 import { FaXTwitter } from "react-icons/fa6";
 import BackgroundCellAnimation from "../AnimationPages/BackgroundCellAnimation";
 import About from "./About";
@@ -59,9 +60,9 @@ const Home = () => {
 
         <div className="absolute top-1/2 lg:translate-x-1/2   -translate-y-1/3 grid gap-10 z-40 opacity-95">
           <p className="text-center font-bold text-7xl font-Oswald p-1 opacity-85 text-slate-100">
-            Hey, I'm <span className=" font-Oswald text-white">Saurav G.C.</span>
+            Hey, I'm <span className=" font-Oswald text-blue-500">Saurav G.C.</span>
           </p>
-          <h1 className="max-w-3xl font-base text-xl font-poppins text-center p-1 opacity-70">
+          <h1 className="max-w-3xl font-base lg:text-xl text-sm  font-poppins text-center p-2 opacity-70">
             I'm a{" "}
             <span className="border-b border-purple-500 max-w-fit ">
               Web Developer
@@ -113,9 +114,21 @@ const Home = () => {
             );
           })}
         </div>
+        <div className="absolute bottom-3 flex  justify-center items-center opacity-8  w-full lg:pl-8">
+        <div className="w-4 h-8 border border-gray-400 rounded-full flex justify-center ">
+          <motion.div
+            className="w-2 h-2 bg-blue-500 rounded-full"
+            animate={{ y: [5, 15, 5] }}
+            transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
+          />
+        </div>
+       
       </div>
+      </div>
+    
+     
 
-      <div>
+      <div >
         <About />
         <Project />
         <Contact />
