@@ -58,34 +58,36 @@ const Home = () => {
       <div className="font-poppins  text-white -mt-16" id="home">
         <BackgroundCellAnimation />
 
-        <div className="absolute top-1/2 lg:translate-x-1/2   -translate-y-1/3 grid gap-10 z-40 opacity-95">
-          <p className="text-center font-bold text-7xl font-Oswald p-1 opacity-85 text-slate-100">
-            Hey, I'm <span className=" font-Oswald text-blue-500">Saurav G.C.</span>
-          </p>
-          <h1 className="max-w-3xl font-base lg:text-xl text-sm  font-poppins text-center p-2 opacity-70">
-            I'm a{" "}
-            <span className="border-b border-purple-500 max-w-fit ">
-              Web Developer
+<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3 grid gap-6 md:gap-8 lg:gap-10 z-40 opacity-95 w-full px-4 sm:px-6 lg:px-8">
+  {/* Heading */}
+  <p className="text-center font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-Oswald p-1 opacity-85 text-slate-100">
+    Hey, I'm <span className="font-Oswald text-blue-500">Saurav G.C.</span>
+  </p>
 
-            </span>
-            <span>{" "}
-              building and managing Websites and Web Applications that leads to
-              impactful designs that enhance user engagement.
-            </span>
-          </h1>
-          <div className="flex text-lg ml-3 justify-center text-blue-400 transition-all duration-300 ease-in-out">
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              className="flex items-center justify-center gap-2 text-lg text-blue-400 transition-all duration-300 ease-in-out hover:scale-105 hover:text-blue-500 cursor-pointer"
-            >
-              Connect with me
-              <RiArrowRightSLine className="-ml-2 text-center text-xl transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
-            </Link>
-          </div>
+  {/* Subheading */}
+  <h1 className="max-w-3xl mx-auto font-base text-sm sm:text-base md:text-lg lg:text-xl font-poppins text-center p-2 opacity-70">
+  I'm a{" "}
+  <span className="border-b border-purple-500 max-w-fit inline-block">Web Developer</span>
+  <span>
+    {" "}
+    building and managing Websites and Web Applications that lead to impactful
+    designs and enhance user engagement.
+  </span>
+</h1>
 
-        </div>
+  {/* Connect Button */}
+  <div className="flex text-lg justify-center text-blue-400 transition-all duration-300 ease-in-out">
+    <Link
+      to="contact"
+      smooth={true}
+      duration={500}
+      className="flex items-center justify-center gap-2 text-lg text-blue-400 transition-all duration-300 ease-in-out hover:scale-105 hover:text-blue-500 cursor-pointer"
+    >
+      Connect with me
+      <RiArrowRightSLine className="-ml-2 text-center text-xl transition-transform duration-300 ease-in-out group-hover:translate-x-1" />
+    </Link>
+  </div>
+</div>
 
         <div className="absolute hidden lg:grid top-1/3 left-0 z-40">
           {logo.map((item, index) => {
