@@ -107,7 +107,7 @@ const Home = () => {
                 <h1 className="text-lg font-poppins text-black font-medium ">
                   {item.name}
                 </h1>
-                <p className={`text-${item.color} text-2xl text-center`}>
+                <p className={`text-${item.color}  text-2xl text-center`}>
                   {item.icon}
                 </p>
               </a>
