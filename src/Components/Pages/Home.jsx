@@ -107,7 +107,7 @@ const Home = () => {
                 <h1 className="text-lg font-poppins text-black font-medium ">
                   {item.name}
                 </h1>
-                <p className={`text-${item.color}  text-2xl text-center`}>
+                <p className={`text-${item.color}   text-2xl text-center`}>
                   {item.icon}
                 </p>
               </a>
@@ -119,7 +119,7 @@ const Home = () => {
           <motion.div
             className="w-2 h-2 bg-blue-500 rounded-full"
             animate={{ y: [5, 15, 5] }}
-            transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
+            transition={{ repeat: Infinity, duration: 1.3, ease: "easeInOut" }}
           />
         </div>
        
